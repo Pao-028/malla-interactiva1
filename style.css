@@ -27,3 +27,57 @@ body {
   color: white;
   border-color: #689f38;
 }
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #e6f2ff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #004d66;
+}
+
+.malla {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.semestre {
+  background-color: #cce6ff;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 250px;
+}
+
+.semestre h2 {
+  color: #00394d;
+  margin-bottom: 10px;
+}
+
+.ramo {
+  background-color: #99ccff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.ramo:hover {
+  transform: scale(1.03);
+}
+
+.ramo.aprobado {
+  background-color: #66b3ff;
+  color: white;
+}
+
+.ramo.bloqueado {
+  background-color: #b3b3b3;
+  color: #666;
+  cursor: not-allowed;
+}
+
