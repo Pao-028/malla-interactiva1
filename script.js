@@ -116,4 +116,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // Primera actualización al cargar
   actualizarVisual();
 });
-
