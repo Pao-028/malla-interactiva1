@@ -107,10 +107,11 @@ header h1 {
 
 /* Aprobado */
 .ramo.aprobado {
-  background: linear-gradient(180deg, #84caff 0%, #4faeff 100%);
-  color: #001e2b;
-  box-shadow: 0 8px 30px rgba(60,150,255,0.25);
+  background-color: #66b3ff;
+  color: white;
+  text-decoration: line-through; /* <-- Texto tachado */
 }
+
 
 /* Bloqueado */
 .ramo.bloqueado {
