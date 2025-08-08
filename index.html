@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malla Interactiva MV</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Malla Interactiva - Medicina Veterinaria</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Malla Interactiva Medicina Veterinaria</h1>
+  <header>
+    <h1>Malla Interactiva — Medicina Veterinaria</h1>
+    <p class="sub">Haz clic en un ramo disponible para marcarlo como aprobado y desbloquear sus dependientes.</p>
+  </header>
 
-  <div class="malla">
-
+  <main class="malla">
     <!-- PRIMER SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Primer Semestre</h2>
       <div class="ramo" data-ramo="Elementos de cálculo" data-desbloquea="Bioestadística">Elementos de cálculo</div>
       <div class="ramo" data-ramo="Química general">Química general</div>
@@ -21,10 +23,10 @@
       <div class="ramo" data-ramo="Educación física">Educación física</div>
       <div class="ramo" data-ramo="Intro MV 1" data-desbloquea="Intro MV 2">Intro MV 1</div>
       <div class="ramo" data-ramo="Optativo general 1">Optativo general 1</div>
-    </div>
+    </section>
 
     <!-- SEGUNDO SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Segundo Semestre</h2>
       <div class="ramo" data-ramo="Embriología vet" data-desbloquea="Fisiología reproductiva">Embriología vet</div>
       <div class="ramo" data-ramo="Anatomía vet" data-desbloquea="Morfología vet">Anatomía vet</div>
@@ -32,10 +34,10 @@
       <div class="ramo" data-ramo="Histología" data-desbloquea="Patología general">Histología</div>
       <div class="ramo" data-ramo="Intro MV 2">Intro MV 2</div>
       <div class="ramo" data-ramo="Optativo general 2">Optativo general 2</div>
-    </div>
+    </section>
 
     <!-- TERCER SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Tercer Semestre</h2>
       <div class="ramo" data-ramo="Bioestadística" data-desbloquea="Economía y adm. pecuaria,Genética pecuaria">Bioestadística</div>
       <div class="ramo" data-ramo="Morfología vet" data-desbloquea="Fisiología reproductiva">Morfología vet</div>
@@ -43,10 +45,10 @@
       <div class="ramo" data-ramo="Fisiología vet" data-desbloquea="Fisiopatología vet">Fisiología vet</div>
       <div class="ramo" data-ramo="Microbiología general" data-desbloquea="Enfermedades infecciosas">Microbiología general</div>
       <div class="ramo" data-ramo="Inmunología" data-desbloquea="Patología general">Inmunología</div>
-    </div>
+    </section>
 
     <!-- CUARTO SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Cuarto Semestre</h2>
       <div class="ramo" data-ramo="Fisiología reproductiva" data-desbloquea="Reproducción animal 1,Reproducción animal 2">Fisiología reproductiva</div>
       <div class="ramo" data-ramo="Etología y bienestar">Etología y bienestar</div>
@@ -54,10 +56,10 @@
       <div class="ramo" data-ramo="Enfermedades infecciosas" data-desbloquea="Patología esp. e inmunopato,Epidemiología vet">Enfermedades infecciosas</div>
       <div class="ramo" data-ramo="Patología general" data-desbloquea="Enfermedades parasitarias,Patología esp. e inmunopato">Patología general</div>
       <div class="ramo" data-ramo="Inglés 1" data-desbloquea="Inglés 2">Inglés 1</div>
-    </div>
+    </section>
 
     <!-- QUINTO SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Quinto Semestre</h2>
       <div class="ramo" data-ramo="Reproducción animal 1" data-desbloquea="Producción rumiantes 1">Reproducción animal 1</div>
       <div class="ramo" data-ramo="Nutrición y alimentación" data-desbloquea="Producción rumiantes 1,Producción NO rumiantes,Acuicultura y enf. de peces">Nutrición y alimentación</div>
@@ -66,10 +68,10 @@
       <div class="ramo" data-ramo="Enfermedades parasitarias" data-desbloquea="Epidemiología vet,Práctica TT y servicio MV">Enfermedades parasitarias</div>
       <div class="ramo" data-ramo="Práctica básica">Práctica básica</div>
       <div class="ramo" data-ramo="Inglés 2" data-desbloquea="Inglés 3">Inglés 2</div>
-    </div>
+    </section>
 
     <!-- SEXTO SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Sexto Semestre</h2>
       <div class="ramo" data-ramo="Economía y adm. pecuaria" data-desbloquea="Producción rumiantes 2">Economía y adm. pecuaria</div>
       <div class="ramo" data-ramo="Reproducción animal 2">Reproducción animal 2</div>
@@ -78,10 +80,10 @@
       <div class="ramo" data-ramo="Enfermedades de aves">Enfermedades de aves</div>
       <div class="ramo" data-ramo="Epidemiología vet" data-desbloquea="Práctica TT y servicio MV,Control sanitario">Epidemiología vet</div>
       <div class="ramo" data-ramo="Inglés 3">Inglés 3</div>
-    </div>
+    </section>
 
-    <!-- SÉPTIMO SEMESTRE -->
-    <div class="semestre">
+    <!-- SEPTIMO SEMESTRE -->
+    <section class="semestre">
       <h2>Séptimo Semestre</h2>
       <div class="ramo" data-ramo="Producción rumiantes 1" data-desbloquea="Producción rumiantes 2,Productos animales">Producción rumiantes 1</div>
       <div class="ramo" data-ramo="Genética pecuaria">Genética pecuaria</div>
@@ -90,10 +92,10 @@
       <div class="ramo" data-ramo="Medicina interna 1" data-desbloquea="Clínica rumiantes,Clínica equinos,Clínica peq. animales">Medicina interna 1</div>
       <div class="ramo" data-ramo="Práctica TT y servicio MV">Práctica TT y servicio MV</div>
       <div class="ramo" data-ramo="Optativo de Especialidad 1">Optativo de Especialidad 1</div>
-    </div>
+    </section>
 
     <!-- OCTAVO SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Octavo Semestre</h2>
       <div class="ramo" data-ramo="Producción rumiantes 2" data-desbloquea="Formulación y ev. proyectos">Producción rumiantes 2</div>
       <div class="ramo" data-ramo="Productos animales" data-desbloquea="Formulación y ev. proyectos">Productos animales</div>
@@ -102,30 +104,34 @@
       <div class="ramo" data-ramo="Medicina interna 2" data-desbloquea="Clínica rumiantes,Clínica equinos,Clínica peq. animales">Medicina interna 2</div>
       <div class="ramo" data-ramo="Control sanitario" data-desbloquea="Salud pública veterinaria,Práctica insp. de alimentos">Control sanitario</div>
       <div class="ramo" data-ramo="Optativo de Especialidad 2">Optativo de Especialidad 2</div>
-    </div>
+    </section>
 
     <!-- NOVENO SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>Noveno Semestre</h2>
       <div class="ramo" data-ramo="Formulación y ev. proyectos">Formulación y ev. proyectos</div>
-      <div class="ramo" data-ramo="Clínica rumiantes" data-desbloquea="Internado Clínico">Clínica rumiantes</div>
-      <div class="ramo" data-ramo="Clínica equinos" data-desbloquea="Internado Clínico">Clínica equinos</div>
-      <div class="ramo" data-ramo="Clínica peq. animales" data-desbloquea="Internado Clínico">Clínica peq. animales</div>
+      <div class="ramo" data-ramo="Clínica rumiantes" data-desbloquea="Internado clínico">Clínica rumiantes</div>
+      <div class="ramo" data-ramo="Clínica equinos" data-desbloquea="Internado clínico">Clínica equinos</div>
+      <div class="ramo" data-ramo="Clínica peq. animales" data-desbloquea="Internado clínico">Clínica peq. animales</div>
       <div class="ramo" data-ramo="Salud pública veterinaria">Salud pública veterinaria</div>
       <div class="ramo" data-ramo="Optativo de Profundidad 1">Optativo de Profundidad 1</div>
-    </div>
+    </section>
 
-    <!-- DÉCIMO SEMESTRE -->
-    <div class="semestre">
+    <!-- DECIMO SEMESTRE -->
+    <section class="semestre">
       <h2>Décimo Semestre</h2>
       <div class="ramo" data-ramo="Proyecto de Tesis">Proyecto de Tesis</div>
       <div class="ramo" data-ramo="Práctica Profesional">Práctica Profesional</div>
-      <div class="ramo" data-ramo="Internado Clínico">Internado Clínico</div>
+      <div class="ramo" data-ramo="Internado clínico">Internado clínico</div>
       <div class="ramo" data-ramo="Práctica insp. de Alimentos">Práctica insp. de Alimentos</div>
       <div class="ramo" data-ramo="Optativo de Profundidad 2">Optativo de Profundidad 2</div>
-    </div>
+    </section>
+  </main>
 
-  </div>
+  <footer>
+    <button id="reset">Reiniciar malla (borrar aprobados)</button>
+    <p class="nota">Los ramos se desbloquean si <em>al menos uno</em> de sus requisitos está aprobado.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
