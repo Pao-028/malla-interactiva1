@@ -1,88 +1,166 @@
-/* Fondo oscuro con estrellas animadas */
+/* --- Tipografía y fondo estrellado --- */
+* { box-sizing: border-box; }
+
 body {
   font-family: "Times New Roman", Times, serif;
-  background-color: #0d1b2a; /* azul oscuro casi negro */
-  text-align: center;
-  padding: 20px;
   margin: 0;
+  padding: 30px 20px;
+  background: radial-gradient(ellipse at bottom, #0b1630 0%, #071023 50%, #02040a 100%);
+  color: #dbeeff;
+  min-height: 100vh;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Capa de estrellas */
+/* Estrellas (pseudo-elemento grande para muchos puntos) */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
   background: transparent;
+  z-index: -2;
+  pointer-events: none;
   box-shadow:
-    100px 200px white,
-    300px 400px white,
-    600px 150px white,
-    900px 250px white,
-    1200px 100px white,
-    500px 50px white,
-    800px 300px white,
-    1300px 400px white,
-    200px 350px white,
-    1000px 500px white;
-  animation: twinkle 2s infinite alternate;
-  z-index: -1;
+    50px 60px #ffffff, 120px 200px #ffffff, 320px 50px #ffffff,
+    520px 260px #ffffff, 760px 120px #ffffff, 940px 340px #ffffff,
+    1080px 80px #ffffff, 1400px 220px #ffffff, 160px 420px #ffffff,
+    400px 380px #ffffff, 2000px 300px #ffffff, 1800px 120px #ffffff;
+  opacity: 0.9;
+  filter: blur(0.5px);
+  animation: twinkle 3s infinite ease-in-out alternate;
 }
 
 @keyframes twinkle {
-  0% { opacity: 0.8; }
-  100% { opacity: 1; }
+  from { transform: translateY(0); opacity: 0.7; }
+  to   { transform: translateY(-6px); opacity: 1; }
 }
 
-h1 {
-  color: #66b3ff;
+header h1 {
+  margin: 0 0 6px 0;
+  color: #bfe6ff;
+  text-shadow: 0 2px 8px rgba(30,120,200,0.25);
+  font-size: 28px;
 }
 
+.sub {
+  margin-top: 0;
+  color: #9fcff9;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+/* --- Contenedor de la malla --- */
 .malla {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 30px;
+  align-items: flex-start;
+  padding-bottom: 30px;
 }
 
+/* Cada semestre como tarjeta */
 .semestre {
-  background-color: rgba(51, 102, 153, 0.8); /* azul translúcido */
-  border-radius: 10px;
-  padding: 15px;
-  min-width: 250px;
-  box-shadow: 0 0 15px rgba(102, 178, 255, 0.6);
+  background: linear-gradient(180deg, rgba(12,39,63,0.55), rgba(6,24,40,0.45));
+  border: 1px solid rgba(120,185,255,0.08);
+  min-width: 260px;
+  max-width: 320px;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(6,22,40,0.6), 0 0 12px rgba(100,170,255,0.05) inset;
 }
 
+/* Título semestre */
 .semestre h2 {
-  color: #b3daff;
-  margin-bottom: 10px;
+  margin: 6px 0 10px 0;
+  color: #d0f0ff;
+  font-size: 18px;
+  text-align: center;
 }
 
+/* Ramo (cuadro clicable) */
 .ramo {
-  background-color: #99ccff;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #d7f0ff 0%, #bfe6ff 100%);
+  color: #03314a;
+  font-weight: 600;
+  text-align: left;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
+  border: 1px solid rgba(15,80,140,0.12);
+  box-shadow: 0 3px 10px rgba(20,90,150,0.08);
+  transition: transform 150ms ease, box-shadow 150ms ease, background 200ms ease, opacity 200ms;
+  position: relative;
 }
 
+/* Hover de disponible */
 .ramo:hover {
-  transform: scale(1.03);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(20,90,150,0.16);
 }
 
+/* Aprobado */
 .ramo.aprobado {
-  background-color: #66b3ff;
-  color: white;
+  background: linear-gradient(180deg, #84caff 0%, #4faeff 100%);
+  color: #001e2b;
+  box-shadow: 0 8px 30px rgba(60,150,255,0.25);
 }
 
+/* Bloqueado */
 .ramo.bloqueado {
-  background-color: #4d4d4d;
-  color: #ccc;
-  cursor: not-allowed;
+  background: linear-gradient(180deg, #444a55, #383d45);
+  color: #9aa3b3;
+  cursor: default;
+  opacity: 0.8;
+  transform: none;
+  box-shadow: none;
 }
 
+/* Indicación pequeña de estado */
+.ramo .tag {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  color: #021726;
+}
+
+/* Footer y botones */
+footer {
+  margin-top: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+#reset {
+  background: linear-gradient(180deg,#1b2b3a,#0f1a26);
+  color: #cfe8ff;
+  border: 1px solid rgba(150,200,255,0.08);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+#reset:hover { transform: translateY(-2px); }
+
+/* Nota */
+.nota {
+  color: #9fcff9;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .semestre { min-width: 220px; max-width: 100%; }
+  .malla { gap: 14px; padding: 10px; }
+}
