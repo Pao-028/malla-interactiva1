@@ -1,41 +1,45 @@
-body {
-  font-family: sans-serif;
-  text-align: center;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.cell {
-  padding: 30px;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 10px;
-}
-
-.cell.active {
-  background-color: #8bc34a;
-  color: white;
-  border-color: #689f38;
-}
+/* Fondo oscuro con estrellas animadas */
 body {
   font-family: "Times New Roman", Times, serif;
-  background-color: #e6f2ff;
+  background-color: #0d1b2a; /* azul oscuro casi negro */
   text-align: center;
   padding: 20px;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Capa de estrellas */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow:
+    100px 200px white,
+    300px 400px white,
+    600px 150px white,
+    900px 250px white,
+    1200px 100px white,
+    500px 50px white,
+    800px 300px white,
+    1300px 400px white,
+    200px 350px white,
+    1000px 500px white;
+  animation: twinkle 2s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
 }
 
 h1 {
-  color: #004d66;
+  color: #66b3ff;
 }
 
 .malla {
@@ -46,14 +50,15 @@ h1 {
 }
 
 .semestre {
-  background-color: #cce6ff;
+  background-color: rgba(51, 102, 153, 0.8); /* azul translúcido */
   border-radius: 10px;
   padding: 15px;
   min-width: 250px;
+  box-shadow: 0 0 15px rgba(102, 178, 255, 0.6);
 }
 
 .semestre h2 {
-  color: #00394d;
+  color: #b3daff;
   margin-bottom: 10px;
 }
 
@@ -76,8 +81,8 @@ h1 {
 }
 
 .ramo.bloqueado {
-  background-color: #b3b3b3;
-  color: #666;
+  background-color: #4d4d4d;
+  color: #ccc;
   cursor: not-allowed;
 }
 
